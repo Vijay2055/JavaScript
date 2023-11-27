@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            
+            
+        }
+        .button{
+            margin: 10px;
+            height: 80px;
+            width: 80px;
+            border: 2px solid gray;
+            
+        }
+
+        .header{
+            display: flex;
+            justify-content: center;
+            background-color: darkgrey;
+            
+        }
+        p{
+            border: 1px solid gray;
+            padding: 5px;
+            margin-left: 10px;
+            border-radius: 5px;
+        }
+        p:hover{
+            background-color: dimgray;
+        }
+
+        hr{
+            padding: 0;
+            margin: 0;
+            background-color:gray;
+            height: 2px;
+        }
+        h1{
+            text-align: center;
+        }
+
+        #grey{
+            background-color: grey;
+        }
+
+        #white{
+            background-color: white;
+        }
+
+        #yellow{
+            background-color: yellow;
+        }
+
+        #blue{
+            background-color: blue;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <p>Home</p>
+        <p>Youtube Channel</p>
+    </div>
+    <hr>
+    <h1>Color change scheme</h1>
+    <div class="container" >
+        <div class="button" id="grey"></div>
+        <div class="button" id="white"></div>
+        <div class="button" id="blue"></div>
+        <div class="button" id="yellow"></div>
+
+    </div>
+
+    <h2>
+        Try clicking on one of the color above
+        <span>to change the background color of the page!</span>
+    </h2>
+    <script src="javaScript.js"></script>
+</body>
+</html>
