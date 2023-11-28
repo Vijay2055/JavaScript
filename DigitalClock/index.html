@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: grey;
+            margin: 0;
+        }
+        nav{
+            display: flex;
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 2px solid darkgray;
+        }
+
+        nav span{
+            width: 100px;
+            padding: 5px;
+            margin: 10px;
+            text-align: center;
+            border: 2px solid darkgray;
+        }
+
+       span:hover{
+        background-color: blue;
+       }
+
+       .container{
+        margin: 250px auto;
+        text-align: center;
+        font-size: large;
+        font-weight: 700;
+        
+       }
+
+       #clock{
+        height: 70px;
+        background-color: yellow;
+        width: 200px;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 550px;
+       }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <span>Home</span>
+        <span>More</span>
+    </nav>
+    <div class="container">
+        <p>Your local time</p>
+        <div id="clock">hello</div>
+    </div>
+    <script src="javaScript.js"></script>
+</body>
+</html>

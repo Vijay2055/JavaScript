@@ -1,7 +1,7 @@
 const buttons=document.querySelectorAll(".button")
 const body=document.querySelector("body")
-const header=document.querySelector(".header")
-console.log(header)
+// const header=document.querySelector(".header")
+// console.log(header)
 
 
 buttons.forEach((button)=>{
