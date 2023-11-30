@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            margin: 0;
+            text-align: center;
+            
+        }
+        nav{
+            text-align: center;
+            background-color: grey;
+            height: 45px;
+            padding-top: 5px;
+        }
+        .home{
+            font-size: 30px;
+            border: 1px solid black;
+            padding: 5px 10px;
+            margin: 10px;
+            font-weight: 700;
+            color: white;
+        }
+
+        button{
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <span class="home">Home</span>
+        <span class="home">surti</span>
+    </nav>
+
+    <h1>Backgound change app</h1>
+    <h2>Start is for changing the background and Stop is for stop the changing backgound</h2>
+    <button class="start">Start</button>
+    <button class="stop">Stop</button>
+    
+</body>
+
+<script>
+    const body=document.querySelector('body')
+    console.log(body)
+    let startChanging
+    
+    //random number generator
+    //let randomNum=(num)=>{
+     // return Math.floor(Math.random()*num)
+    //}
+
+    //other method to get random background
+    let getColor=()=>{
+        const hexavlaue='0123456789ABCDEF'
+        let color='#'
+        for(let i=0;i<6;i++){
+            color+=hexavlaue[Math.floor(Math.random()*hexavlaue.length)]
+            
+        }
+
+        return color
+        
+    }
+
+   
+    
+
+    const start=()=>{
+
+        //this is for first method 
+       // body.style.backgroundColor=`rgb(${randomNum(255)},${randomNum(255)},${randomNum(255)})`
+
+      //this is for second method
+        body.style.backgroundColor=getColor()
+
+       
+        
+    }
+
+    const changeBg=()=>{
+        if(!startChanging){
+            startChanging=setInterval(start,1000)
+        }
+        
+    }
+
+    const stopBg=()=>{
+        clearInterval(startChanging)
+        startChanging=null
+    }
+
+    document.querySelector('.start').addEventListener('click',changeBg)
+
+    document.querySelector('.stop').addEventListener('click',stopBg)
+</script>
+</html>

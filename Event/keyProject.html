@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            margin: 0;
+            text-align: center;
+            background-color: black;
+           
+            
+        }
+        nav{
+            text-align: center;
+            background-color: grey;
+            height: 45px;
+            padding-top: 5px;
+        }
+        .home{
+            font-size: 30px;
+            border: 1px solid black;
+            padding: 5px 7px;
+            margin: 10px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .project{
+            margin: 200px auto;
+            font-size: 30px;
+            color: white;
+            display: flex;
+            justify-content: center;
+        }
+
+        #insert{
+            align-items: center;
+            font-size: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+          }
+
+       
+
+    </style>
+</head>
+<body>
+    <nav>
+        <span class="home">Home</span>
+        <span class="home">surti</span>
+    </nav>
+
+    <div class="project">
+        <div id="insert">
+            <div class="key">Press the key and watch the magic</div>
+        </div>
+    </div>
+
+   
+    
+</body>
+<script>
+    count=0
+    const insert=document.querySelector('#insert')
+    window.addEventListener('keypress',(e)=>{
+        insert.innerHTML=`
+        <div class="color">
+        <table >
+            <tr>
+              <th>Key</th>
+              <th>KeyCode</th>
+              <th>Code</th>
+            </tr>
+            <tr>
+              <td>${e.key===' '?"Space":e.key}</td>
+              <td>${e.keyCode}</td>
+              <td>${e.code}</td>
+            </tr>
+           
+          </table>
+          </div>
+        `   
+    })
+</script>
+
+</html>

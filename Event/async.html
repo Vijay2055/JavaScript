@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Heloo felix, How are you</h1>
+    <button id="stop">stop</button>
+</body> 
+<script>
+    const change=()=>{
+        const h=document.querySelector("h1")
+        h.innerHTML="God, When i will be selected for job?"
+        
+    }
+   const changeMe= setTimeout(change,2000)
+
+
+
+   const stop= document.querySelector("#stop")
+   stop.addEventListener("click",(e)=>{
+    clearTimeout(changeMe)
+    console.log("Time is stopped, Can't be changed")
+
+   })
+
+   
+   
+</script>
+</html>
